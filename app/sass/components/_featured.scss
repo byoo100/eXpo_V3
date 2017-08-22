@@ -1,0 +1,91 @@
+#featured-posts{
+	display: block;
+	background-color: $color_black;
+
+	.swiper-container{
+			display: block;
+	    position: relative;
+	    padding-bottom: 56.25%;
+	    background-color: #000;
+	    @media screen and (min-width:$window-md){ padding-bottom: 40%; }
+	    @media screen and (min-width:1920px){ max-width: 1920px; }
+
+	    .swiper-wrapper{
+	    	position: absolute;
+		    z-index: 1;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+
+  			.swiper-link{
+  				position: absolute;
+  				width: 80%;
+  				padding-left: 5%;
+  				left: 0;
+  				bottom: 15%;
+  				z-index: 5;
+  				@media screen and (min-width:$window-md){ width: 60%; }
+
+  				.swiper-tag{
+  						font-size: 0.9em;
+  			    	font-weight: 700;
+  			    	text-transform: lowercase;
+  			    	@media screen and (min-width:$window-xl){ font-size: 1em; }
+  			    }
+
+  			    .swiper-title{
+  			    	display: block;
+  			    	a{
+  			    		display: inline-block;
+  			    		font-size: 1.75em;
+  			    		font-weight: 700;
+  			    		color: #f2f2f2;
+  			    		text-decoration: none;
+  			    		text-shadow: 3px 3px 3px #000;
+  			    		&:hover{ text-decoration: underline; }
+  					    @media screen and (min-width:$window-md){ font-size: 2.25em; }
+  					    @media screen and (min-width:$window-xl){ font-size: 3em; }
+  			    	}
+  			    }
+
+  			    .swiper-excerpt{
+  			    	display: none;
+  				    	a{
+  				    		display: inline-block;
+  				    		font-size: 0.9em;
+  				    		color: #c2c2c2;
+  				    		text-decoration: none;
+  				    		text-shadow: 3px 3px 3px #000;
+  				    		&:hover{ text-decoration: underline; }
+  				    		@media screen and (min-width:$window-xl){ font-size: 1em; }
+  					    }
+  		    		@media screen and (min-width:$window-md){ display: block; }
+  				}
+
+  			} /*swiper-link*/
+
+		    .swiper-vignette{
+    	    background-image: -webkit-gradient(linear,left top,right top,color-stop(0, $color_black),color-stop(65%,transparent));
+			    background-image: -webkit-linear-gradient(left, $color_black 0,transparent 65%);
+			    background-image: -webkit-linear-gradient(left, $color_black 0,transparent 65%);
+			    background-image: linear-gradient(to right, $color_black 0,transparent 65%);
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    z-index: 2;
+		    }
+
+			.swiper-image{
+				position: absolute;
+        width: 100%;
+		    height: 100%;
+		    right: 0;
+		    top: 0;
+        object-fit: cover;
+		    z-index: 1;
+			}
+		} /*swiper-wrapper*/
+	} /*swiper-container*/
+} /*#featured-posts*/

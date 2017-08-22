@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+.tmp
+.sass-cache
+dist/bundle.min.js
+dist/style.min.css

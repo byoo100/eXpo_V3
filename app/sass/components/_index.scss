@@ -1,0 +1,99 @@
+.card-layout{
+  background-color: #f0f0f0;
+
+  .card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    padding: 1em;
+    max-width: 1690px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    @media screen and (min-width: $window-sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $window-lg){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: $window-xl){
+      grid-template-columns: repeat(4, 1fr);
+      max-width: $window-xxl;
+    }
+
+    @supports not (display: grid) {
+      max-width: $single-container-md;
+      margin: 0 auto;
+      overflow-y: auto;
+
+      .card-single{
+        margin-bottom: 1em;
+        &:first-child{ margin-top: 1em; }
+      }
+    }//not support
+
+
+    .card-single{
+      padding: 0 1em 1em;
+      background-color: #fff;
+
+      .entry-meta{
+        text-align: center;
+      }
+
+      .featured-image{
+        margin: 0 -1em 1em;
+
+        a{
+          display: block;
+          transition: opacity 200ms ease-in-out;
+
+          &:hover{
+            opacity: 0.75;
+          }
+        }
+      }//.featured-image
+
+      .post-title{
+        text-align: center;
+
+        a{
+          display:inline-block;
+          color: $color_black;
+          text-decoration: none;
+
+          &:hover{ text-decoration: underline; }
+
+          h1{ font-size: 1.6em; margin: 0 0 0.25em; }
+        }
+      }//.post-title
+
+      .post-excerpt{
+        font-size: 0.9em;
+        margin-bottom: 1em;
+      }
+
+      .readmore{
+        display: block;
+        text-align: center;
+
+        a{
+          display: inline-block;
+          padding: 0.75em 1em;
+          border-radius: 5px;
+          color: $color_white;
+          background-color: $color_dark_blue;
+          text-decoration: none;
+          transition: all 200ms ease-in-out;
+
+          &:hover{
+            background-color: lighten($color_dark_blue, 10%);
+          }
+        }
+      }//.readmore
+    }//.card-single
+  }//.card-wrapper
+}//.card-layout

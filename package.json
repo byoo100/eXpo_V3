@@ -1,0 +1,51 @@
+{
+  "name": "eXpo_V3",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "3",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "compression": "^1.7.0",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-entities": "^1.2.1",
+    "if-env": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "optimize-css-assets-webpack-plugin": "^3.0.0",
+    "postcss-loader": "^2.0.6",
+    "react-html-parser": "^1.0.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "swiper": "^3.4.2",
+    "underscore": "^1.8.3",
+    "url-loader": "^0.5.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && yarn run start:prod || yarn run start:dev",
+    "start:dev": "webpack-dev-server --inline --history-api-fallback --open",
+    "start:prod": "webpack && node server.js"
+  }
+}

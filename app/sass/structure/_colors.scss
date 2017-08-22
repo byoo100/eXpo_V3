@@ -1,0 +1,156 @@
+// Color Scheme:
+// https://color.adobe.com/Quiet-Cry-color-theme-124171/
+
+// White
+$color_white: #eeeff7;
+
+// Bright Blue
+$color_bright_blue: #92cdcf;
+
+// Dark Blue
+$color_dark_blue: #324057;
+
+// Dark Grey
+$color_dark_grey: #31353D;
+
+// Black
+$color_black: #1C1D21;
+
+// ORANGE
+$color_orange: 	#da6f2b;
+
+// PURPLE
+$color_purple: 	#6a478f;
+
+// TEAL
+$color_teal: 	#30997a;
+
+// Blue
+$color_blue: #32749d;
+
+//Icon Colors
+$color-post: $color_orange;
+$color-post-projects: $color_blue;
+$color-post-photography: $color_purple;
+$color-post-media: $color_teal;
+
+
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: $color_black;
+$color__link-visited: $color_black;
+$color__link-hover: $color_black;
+$color__text-main: $color_black;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+.color-post{ color: $color_orange; }
+.color-post-projects{ color: $color_blue; }
+.color-post-photography{ color: $color_purple; }
+.color-post-media{ color: $color_teal; }
+
+
+.social-twitter {
+    //background: #00aced;
+
+    &:hover,
+    &:active{
+      background: #00aced !important;
+      //background: #0084b4;
+    }
+}//.social-twitter
+
+
+.social-instagram {
+  //background: #cd486b;
+
+  &:hover,
+  &:active{
+    background: #cd486b !important;
+    //background: #fbad50 !important;
+  }
+}//.social-instagram
+
+.social-facebook {
+    //background: #3B5997;
+
+    &:hover,
+    &:active{
+      background: #3B5997 !important;
+      //background: #2d4372 !important;
+    }
+}//.social-facebook
+
+.social-googleplus {
+    //background: #D64937;
+
+    &:hover,
+    &:active{
+      background: #D64937 !important;
+      //background: #b53525 !important;
+    }
+}//.social-googleplus
+
+.social-buffer {
+    //background: #444;
+
+    &:hover,
+    &:active{
+      background: #444 !important;
+      //background: #222 !important;
+    }
+}//.social-buffer
+
+.social-pinterest {
+    // background: #bd081c;
+
+    &:hover,
+    &:active{
+      background: #bd081c !important;
+      //background: #bd081c !important;
+    }
+}//.social-pinterest
+
+.social-linkedin {
+    // background: #0074A1;
+
+    &:hover,
+    &:active{
+      background: #0074A1 !important;
+      //background: #006288 !important;
+    }
+}//.social-linkedin
+
+.social-whatsapp {
+    // background: #43d854;
+
+    &:hover,
+    &:active{
+      background: #43d854 !important;
+      //background: #009688 !important;
+    }
+}//.social-whatsapp
+
+.social-github {
+    // background: #000;
+
+    &:hover,
+    &:active{
+      background: #000 !important;
+      //background: #333 !important;
+    }
+}//.social-twitter

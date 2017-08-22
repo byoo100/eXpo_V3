@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Default Settings
+# http://underscores.me/
+--------------------------------------------------------------*/
+@import "default/style";
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+@import "structure/structure";
+@import "structure/typography";
+@import "structure/colors";
+@import "structure/global";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/mixins";
+@import "components/navigation";
+@import "components/footer";
+@import "components/socialmedia";
+@import "components/featured";
+@import "components/single";
+@import "components/index";
