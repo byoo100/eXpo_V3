@@ -110,7 +110,7 @@ export default class Single extends React.Component {
 
 
     return(
-      <div id="page-content" class="blog-index">
+      <div id="page-content" class="single-post">
 
         <Loading fetching={fetching}/>
 

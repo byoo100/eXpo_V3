@@ -1,0 +1,300 @@
+$info_xs: 80px;
+$info_lg: 120px;
+$info_xl: 160px;
+
+$video_sm: 60px;
+$video_md: 80px;
+
+
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $page-container-lg;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: $window-md){
+    flex-wrap: nowrap;
+  }
+}//.about-container
+
+
+#about-web{
+  background-color: #f4f4f4;
+
+  .web-text{
+    @include fadeInLeftBig(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: $window-md){ width: 50%; text-align: inherit; }
+    @media screen and (min-width: $window-xl){ width: 40%; }
+
+    .web-text-wrap{
+      display: block;
+      padding: 1em;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    ul{
+      text-align: left;
+      padding: 0;
+    }
+
+  }//.web-text
+
+  .web-featured{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    margin: auto;
+    position: relative;
+
+    @media screen and (min-width: $window-md){ width: 50%; padding: 1.75em; }
+
+    .icon{
+      @include animateStagger('fadeInRightBig', 300ms, 10);
+      display: block;
+      width: $info_xs;
+      margin: 0 auto;
+      @media screen and (min-width: $window-lg){ width: $info_lg; }
+      @media screen and (min-width: $window-xl){ width: $info_xl; }
+
+      .icon-name{
+        display: block;
+        text-align: center;
+      }//.icon-name
+
+      .icon-image{
+        display: block;
+        width: $info_xs;
+        height: $info_xs;
+        background: url('/images/brian-icons-compressed.png') no-repeat;
+        background-size: 280px;
+
+        &.react{ background-position: -10px -10px; }
+        &.redux{ background-position: -100px -10px; }
+        &.wordpress{ background-position: -190px -10px; }
+
+        &.webpack{ background-position: -10px -100px; }
+        &.github{ background-position: -100px -100px; }
+        &.babel{ background-position: -190px -100px; }
+
+        &.swiper{ background-position: -10px -190px; }
+        &.acf{ background-position: -100px -190px; background-color: #333; border-radius: 50%; }
+        &.atom{ background-position: -190px -190px; }
+
+        @media screen and (min-width: $window-lg){
+          width: $info_lg;
+          height: $info_lg;
+          background-size: 420px;
+
+          &.react{ background-position: -15px -15px; }
+          &.redux{ background-position: -150px -15px; }
+          &.wordpress{ background-position: -285px -15px; }
+
+          &.webpack{ background-position: -15px -150px; }
+          &.github{ background-position: -150px -150px; }
+          &.babel{ background-position: -285px -150px; }
+
+          &.swiper{ background-position: -15px -285px; }
+          &.acf{ background-position: -150px -285px; }
+          &.atom{ background-position: -285px -285px; }
+        }
+
+        @media screen and (min-width: $window-xl){
+          width: $info_xl;
+          height: $info_xl;
+          background-size: 560px;
+
+          &.react{ background-position: -20px -20px; }
+          &.redux{ background-position: -200px -20px; }
+          &.wordpress{ background-position: -380px -20px; }
+
+          &.webpack{ background-position: -20px -200px; }
+          &.github{ background-position: -200px -200px; }
+          &.babel{ background-position: -380px -200px; }
+
+          &.swiper{ background-position: -20px -380px; }
+          &.acf{ background-position: -200px -380px; }
+          &.atom{ background-position: -380px -380px; }
+        }
+
+      }//.icon-image
+
+    }//.icon
+
+  }//.web-featured
+
+}//#about-icons
+
+//=========================
+
+#about-video{
+
+  .video-text{
+    @include fadeInRightBig(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    order: 1;
+
+    @media screen and (min-width: $window-md){ width: 50%; order: 2; text-align: inherit; }
+    @media screen and (min-width: $window-xl){ width: 40%; }
+
+    .video-text-wrap{
+      display: block;
+      padding: 1em;
+      margin: 0 auto;
+      position: relative;
+    }//.video-text-wrap
+  }//.video-text
+
+  .video-featured{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 2;
+    @media screen and (min-width: $window-md){ width: 50%; order: 1; }
+
+    .video-featured-wrap{
+      padding: 1em;
+
+      .video-image{
+        @include fadeInLeftBig(0);
+        display: block;
+        width: 75%;
+        margin: 0 auto 1em;
+
+        @media screen and (min-width: $window-xl){ width: 100%; }
+      }//.video-image
+
+      .video-icons{
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        .icon{
+          @include animateStagger('fadeInLeftBig', 300ms, 5);
+          display: inline-block;
+          width: $video_sm;
+          height: $video_sm;
+          margin: 0.5em 0.25em;
+          background: url('/images/adobe-icons-compressed.png') no-repeat;
+          background-size: 315px 165px;
+
+          &.adobe-premiere{ background-position: -15px -15px; }
+          &.adobe-aftereffects{ background-position: -90px -15px;  }
+          &.adobe-audition{ background-position: -165px -15px;  }
+          &.wirecast{ background-position: -240px -15px;  }
+
+          @media screen and (min-width: $window-lg){
+            width: $video_md;
+            height: $video_md;
+            background-size: 420px 220px;
+
+            &.adobe-premiere{ background-position: -20px -20px; }
+            &.adobe-aftereffects{ background-position: -120px -20px;  }
+            &.adobe-audition{ background-position: -220px -20px;  }
+            &.wirecast{ background-position: -320px -20px;  }
+          }
+        }//.icon
+
+      }//.video-icons
+
+    }//.video-featured-wrap
+
+  }//.video-featured
+
+}//#about-video
+
+//=========================
+
+#about-dslr{
+  background-color: #f2f2f2;
+
+  .dslr-text{
+    @include fadeInLeftBig(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: $window-md){ width: 50%; text-align: inherit; }
+    @media screen and (min-width: $window-xl){ width: 40%; }
+
+    .dslr-text-wrap{
+      display: block;
+      padding: 1em;
+      margin: 0 auto;
+      position: relative;
+    }//.video-text-wrap
+  }//.video-text
+
+  .dslr-featured{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: $window-md){ width: 50%; }
+
+    .dslr-featured-wrap{
+      padding: 1em;
+
+      .dslr-image{
+        @include fadeInRightBig(0);
+        display: block;
+        width: 75%;
+        margin: 0 auto 1em;
+
+        @media screen and (min-width: $window-xl){ width: 100%; }
+      }//.video-image
+
+      .dslr-icons{
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        .icon{
+          @include animateStagger('fadeInRightBig', 300ms, 5);
+          display: inline-block;
+          width: $video_sm;
+          height: $video_sm;
+          margin: 0.5em 0.25em;
+          background: url('/images/adobe-icons-compressed.png') no-repeat;
+          background-size: 315px 165px;
+
+          &.adobe-photoshop{ background-position: -15px -90px; }
+          &.adobe-lightroom{ background-position: -90px -90px;  }
+          &.adobe-illustrator{ background-position: -165px -90px;  }
+
+          @media screen and (min-width: $window-lg){
+            width: $video_md;
+            height: $video_md;
+            background-size: 420px 220px;
+
+            &.adobe-photoshop{ background-position: -20px -120px; }
+            &.adobe-lightroom{ background-position: -120px -120px;  }
+            &.adobe-illustrator{ background-position: -220px -120px;  }
+          }
+        }//.icon
+
+      }//.dslr-icons
+
+    }//.dslr-featured-wrap
+
+  }//.dslr-featured
+
+}//#about-dslr

@@ -1,0 +1,100 @@
+@mixin fadeInLeftBig($delay) {
+  animation-name: fadeInLeftBig;
+  animation-duration: 1.15s;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@mixin fadeInRightBig($delay) {
+  animation-name: fadeInRightBig;
+  animation-duration: 1.15s;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    -webkit-animation-fill-mode: forwards;
+  }
+}
+
+
+@mixin fadeInUp($delay) {
+  animation-name: fadeInUp;
+  animation-duration: .8s;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+//================
+// Stagger
+//================
+
+$animation:'none';
+@mixin animateStagger($animation, $delay, $total) {
+  @if $animation == 'fadeInUp' {
+
+    @for $i from 0 to $total {
+      &:nth-child(#{$i}n) {
+        @include fadeInUp(calc( #{$delay} * #{$i} ));
+      }
+    }
+
+  } @elseif $animation == 'fadeInRightBig' {
+
+    @for $i from 0 to $total {
+      &:nth-child(#{$i}n) {
+        @include fadeInRightBig(calc( #{$delay} * #{$i} ));
+      }
+    }
+
+  } @elseif $animation == 'fadeInLeftBig' {
+
+    @for $i from 0 to $total {
+      &:nth-child(#{$i}n) {
+        @include fadeInLeftBig(calc( #{$delay} * #{$i} ));
+      }
+    }
+
+  }//if
+
+}//@mixin animateStagger

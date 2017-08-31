@@ -11,14 +11,17 @@
 @import "structure/typography";
 @import "structure/colors";
 @import "structure/global";
+@import "structure/mixins";
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/mixins";
+@import "components/links";
 @import "components/navigation";
 @import "components/footer";
 @import "components/socialmedia";
+@import "components/animations";
 @import "components/featured";
-@import "components/single";
+@import "pages/single";
 @import "components/index";
+@import "pages/about";

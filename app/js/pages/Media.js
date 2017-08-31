@@ -45,7 +45,7 @@ export default class Media extends React.Component {
     const { fetching, posts } = this.props;
 
     return(
-      <div id="page-content" class="media-index">
+      <div id="page-content" class="index">
 
         <Loading fetching={fetching}/>
 

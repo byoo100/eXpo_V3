@@ -1,5 +1,7 @@
 import React from "react";
 import ReactHtmlParser from 'react-html-parser';
+import LazyLoad from 'react-lazyload';
+
 import { Link } from "react-router";
 import { connect } from "react-redux";
 
@@ -18,6 +20,7 @@ const html = new Entities();
 })
 
 export default class CardLayout extends React.Component {
+
 
   setCardLayout(data) {
 
@@ -87,11 +90,13 @@ export default class CardLayout extends React.Component {
       cardLayout = this.setCardLayout(content);
     }
 
+
+
     return(
-      <section class="card-layout">
-        <div class="card-wrapper">
+      <section id="card-layout">
+        <LazyLoad><div class="card-wrapper">
           { cardLayout }
-        </div>
+        </div></LazyLoad>
       </section>
     );
   }

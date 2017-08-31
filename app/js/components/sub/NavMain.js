@@ -10,6 +10,7 @@ export default class NavMain extends React.Component {
   render() {
 
     var toggleMenu;
+    const email_name = "brianyoo313", email_host = "gmail";
 
     if( !this.props.collapsed ){
       toggleMenu = " active";
@@ -29,7 +30,9 @@ export default class NavMain extends React.Component {
         </div>
 
         <ul id="nav-pre-1">
-
+          <li>
+            <span class="email">{email_name + "@" + email_host + ".com"}</span>
+          </li>
         </ul>
 
         <ul id="nav-pre-2" class="social-list">
@@ -59,9 +62,6 @@ export default class NavMain extends React.Component {
           </li>
           <li>
             <NavLink to="/photography">Photography</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
 

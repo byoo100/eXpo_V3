@@ -86,6 +86,10 @@ $nav_xl_pre: 3em;
     &.active {
       display: block;
     }
+
+    @media screen and (min-width: $nav_mobile){
+      display: none;
+    }
   }//#dark-overlay
 }//.site-navigation
 
@@ -187,7 +191,7 @@ $nav_xl_pre: 3em;
     li{
       flex: 0 0 100%;
 
-      a, span{
+      a{
         display: block;
         font-size: 1.3em;
         padding: 0.5em 0.75em;
@@ -201,6 +205,17 @@ $nav_xl_pre: 3em;
           background-color: $color_orange;
         }
       }//a
+
+      .email{
+        display: block;
+        font-size: 1em;
+        padding: 0.5em 0.75em;
+        color: $color_white;
+        text-align: center;
+
+        @media screen and (min-width: $window-md){ font-size: 0.8em; text-align: inherit; }
+        @media screen and (min-width: $window-lg){ font-size: 0.7em; }
+      }
     }//li
   }//ul
 
@@ -319,6 +334,7 @@ $nav_xl_pre: 3em;
 
       @supports not (display: grid){
         flex: 0 1 50%;
+        margin-right: 0;
       }
     }//#nav-pre-1
 
@@ -331,6 +347,7 @@ $nav_xl_pre: 3em;
 
       @supports not (display: grid){
         flex: 0 1 50%;
+        margin-left: 0;
       }
     }//#nav-pre-2
 
@@ -343,7 +360,7 @@ $nav_xl_pre: 3em;
 
       @supports not (display: grid){
         flex: 0 1 50%;
-        margin: 0;
+        margin-right: 0;
       }
     }
 
@@ -356,7 +373,7 @@ $nav_xl_pre: 3em;
 
       @supports not (display: grid){
         flex: 0 1 50%;
-        margin: 0;
+        margin-left: 0;
       }
     }//#nav-list-2
 
@@ -414,24 +431,40 @@ $nav_xl_pre: 3em;
       height: $nav_xl_pre;
       line-height: $nav_xl_pre;
       margin-right: 1em;
+
+      @supports not (display: grid){
+        margin-right: 0;
+      }
     }
 
     #nav-pre-2{
       height: $nav_xl_pre;
       line-height: $nav_xl_pre;
       margin-left: 1em;
+
+      @supports not (display: grid){
+        margin-left: 0;
+      }
     }
 
     #nav-list-1{
       height: $nav_xl_main;
       line-height: $nav_xl_main;
       margin-right: 1em;
+
+      @supports not (display: grid){
+        margin-right: 0;
+      }
     }
 
     #nav-list-2{
       height: $nav_xl_main;
       line-height: $nav_xl_main;
       margin-left: 1em;
+
+      @supports not (display: grid){
+        margin-left: 0;
+      }
     }
   }//media $window-lg
 }//.nav-container

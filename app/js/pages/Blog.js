@@ -24,17 +24,15 @@ export default class Blog extends React.Component {
   componentWillMount() {
     const { fetching, posts } = this.props;
 
-    this.onloadHideNav();
-
+    if( !this.props.collapsed){
+      this.props.dispatch(hideNav());
+      window.scrollTo(0, 0);
+    }
+    
     if( !fetching && !posts.length ) {
       this.props.dispatch(requestPosts());
       this.props.dispatch(fetchPosts(this.props.page));
     }
-  }
-
-  onloadHideNav() {
-    this.props.dispatch(hideNav());
-    window.scrollTo(0, 0);
   }
 
 
@@ -42,7 +40,7 @@ export default class Blog extends React.Component {
     const { fetching, posts } = this.props;
 
     return(
-      <div id="page-content" class="blog-index">
+      <div id="page-content" class="index">
 
         <Loading fetching={fetching}/>
 

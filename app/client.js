@@ -16,7 +16,6 @@ import Layout from "./js/components/Layout";
 // Pages
 import About from "./js/pages/About";
 import Blog from "./js/pages/Blog";
-import Contact from "./js/pages/Contact";
 import Media from "./js/pages/Media";
 import Photography from "./js/pages/Photography";
 import Projects from "./js/pages/Projects";
@@ -33,7 +32,6 @@ const routes = (
       <Route path="/blog/:articleSlug" component={ Single } />
 
       <Route path="/about" component={ About } />
-      <Route path="/contact" component={ Contact } />
 
       <Route path="/media" component={ Media } />
       <Route path="/media/:articleSlug" component={ Single } />

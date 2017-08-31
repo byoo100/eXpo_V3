@@ -16,6 +16,13 @@
 #page-content{
   display: block;
   min-height: 100vh;
+  overflow:hidden;
+}
+
+.page-section{
+  padding: 1.5em;
+  @media screen and (min-width: $window-md){ padding: 2em; }
+  @media screen and (min-width: $window-xl){ padding: 2.5em; }
 }
 
 .loading{
@@ -23,7 +30,6 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
 
   .lds-ellipsis{
     position: absolute;
@@ -32,3 +38,8 @@
     transform: translate(-50%, -50%);
   }
 }
+
+.lazyload-placeholder{
+  display: block;
+  height: 90vh;
+}//.lazyload-placeholder

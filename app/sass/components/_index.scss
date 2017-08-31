@@ -1,4 +1,4 @@
-.card-layout{
+#card-layout{
   background-color: #f0f0f0;
 
   .card-wrapper{
@@ -10,7 +10,7 @@
     max-width: 1690px;
     margin-right: auto;
     margin-left: auto;
-    
+
     @media screen and (min-width: $window-sm){
       grid-template-columns: repeat(2, 1fr);
     }
@@ -37,6 +37,7 @@
 
 
     .card-single{
+      @include animateStagger('fadeInUp', 300ms, 10);
       padding: 0 1em 1em;
       background-color: #fff;
 
@@ -96,4 +97,4 @@
       }//.readmore
     }//.card-single
   }//.card-wrapper
-}//.card-layout
+}//#card-layout
