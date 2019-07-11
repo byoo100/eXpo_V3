@@ -4,3 +4,5 @@ node_modules
 .sass-cache
 dist/bundle.min.js
 dist/style.min.css
+
+yarn.lock
